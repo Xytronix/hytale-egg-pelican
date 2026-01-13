@@ -19,7 +19,7 @@ file_denylist:
   - hytale-downloader
   - HytaleServer.jar
 startup_commands:
-  Default: './hytale-downloader $([ "{{AUTO_UPDATE}}" = "1" ] || echo ''-skip-update-check'') && java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar HytaleServer.jar -XX:AOTCache=HytaleServer.aot --assets {{ASSETS_PATH}} --backup --backup-dir ${BACKUP_DIR} --backup-frequency ${BACKUP_FREQUENCY}'
+  Default: './hytale-downloader $([ "{{AUTO_UPDATE}}" = "1" ] || echo ''-skip-update-check'') && java -jar HytaleServer.jar -XX:AOTCache=HytaleServer.aot --assets {{ASSETS_PATH}} --backup --backup-dir ${BACKUP_DIR} --backup-frequency ${BACKUP_FREQUENCY}'
 config:
   files: {  }
   startup: {  }
